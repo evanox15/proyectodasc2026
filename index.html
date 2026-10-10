@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plantilla Web</title>
+  <style>
+    /* === Estilos generales === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .boton-naranja {
+      display: inline-block;
+      background-color: #ff5722;
+      color: white;
+      padding: 12px 30px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .boton-naranja:hover {
+      background-color: #e64a19;
+    }
+
+    /* === Sección Hero / Cabecera === */
+    #hero {
+      position: relative;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                  url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1200') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 80px 20px 120px;
+    }
+    #hero:hover{
+      position: relative;
+      background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), 
+                  url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1200') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 80px 20px 120px;
+    }
+
+
+    #hero h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      font-weight: normal;
+    }
+
+    #hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    /* === Tarjetas de servicios === */
+    #servicios {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 0 20px 60px;
+      margin-top:60px;
+      flex-wrap: wrap;
+    }
+
+    .tarjeta-servicio {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 30px 20px;
+      width: 260px;
+      text-align: center;
+    }
+
+    .icono {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 15px;
+      border: 2px solid #ff5722;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ff5722;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .tarjeta-servicio h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .tarjeta-servicio p {
+      font-size: 13px;
+      color: #777;
+      line-height: 1.5;
+    }
+
+    /* === Sección información === */
+    #informacion {
+      max-width: 1100px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .contenedor-imagen img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .contenido-texto h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .contenido-texto p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    .caja-destacada {
+      background-color: #ffb300;
+      color: white;
+      padding: 25px;
+      margin-bottom: 20px;
+    }
+
+    .caja-destacada .numero {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .caja-destacada .etiqueta {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .estadisticas {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 25px;
+    }
+
+    .dato {
+      text-align: center;
+    }
+
+    .dato .valor {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff5722;
+    }
+
+    .dato .texto {
+      font-size: 12px;
+      color: #777;
+    }
+
+    /* === Responsividad === */
+    @media (max-width: 768px) {
+      #informacion {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sección principal con imagen de fondo -->
+  <section id="hero">
+    <h1>Never Spend Your Money</h1>
+    <p>Before You Have It</p>
+    <button class="boton-naranja">Read More</button>
+  </section>
+
+  <!-- Tarjetas de servicios -->
+  <section id="servicios">
+    <div class="tarjeta-servicio">
+      <div class="icono">⚙</div>
+      <h3>Best Services</h3>
+      <p>Consectetur adipisicing elit. Saepe ipsam quod eum.</p>
+    </div>
+
+    <div class="tarjeta-servicio">
+      <div class="icono">♜</div>
+      <h3>Best Ideas</h3>
+      <p>Consectetur adipisicing elit. Saepe ipsam quod eum.</p>
+    </div>
+
+    <div class="tarjeta-servicio">
+      <div class="icono">♦</div>
+      <h3>Future Plans</h3>
+      <p>Consectetur adipisicing elit. Saepe ipsam quod eum.</p>
+    </div>
+  </section>
+
+  <!-- Sección con imagen y texto -->
+  <section id="informacion">
+    <div class="contenedor-imagen">
+      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600" alt="Mujer trabajando">
+    </div>
+
+    <div class="contenido-texto">
+      <h2>Nullam Fermentum Tempus Semper</h2>
+      <p>Phasellus sit amet semper felis, eget consectetur erat. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+
+      <div class="caja-destacada">
+        <div class="numero">14</div>
+        <div class="etiqueta">Years of Experience</div>
+      </div>
+
+      <div class="estadisticas">
+        <div class="dato">
+          <div class="valor">250+</div>
+          <div class="texto">Happy Clients</div>
+        </div>
+        <div class="dato">
+          <div class="valor">80+</div>
+          <div class="texto">Award Wins</div>
+        </div>
+        <div class="dato">
+          <div class="valor">120+</div>
+          <div class="texto">Projects Done</div>
+        </div>
+      </div>
+
+      <button class="boton-naranja">Read More</button>
+    </div>
+  </section>
+
+</body>
+</html>
